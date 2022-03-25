@@ -4,10 +4,10 @@ import {
   Heading,
   Image,
   Text,
-  Link as ChakraLink,
   useColorMode,
   Flex,
 } from "@chakra-ui/react";
+import Head from "next/head";
 import Link from "next/link";
 
 import MotionBox from "lib/components/motion/Box";
@@ -17,37 +17,28 @@ const Page404 = () => {
 
   return (
     <Flex minHeight="70vh" direction="column" justifyContent="center">
+      <Head>
+        <title>Page not found | LostArkly</title>
+      </Head>
       <MotionBox
         animate={{ y: 20 }}
         transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
-        width={["100%", "70%", "60%", "60%"]}
+        width={["60%", "40%", "30%", "30%"]}
         margin="0 auto"
       >
-        <Image
-          src="/404 Error-pana.svg"
-          alt="Error 404 not found Illustration"
-        />
+        <Image src="/beatrice.png" alt="Error 404 not found Illustration" />
       </MotionBox>
-      <Text textAlign="center" fontSize="xs">
-        <ChakraLink
-          href="https://stories.freepik.com/web"
-          isExternal
-          rel="noopener noreferrer"
-        >
-          Illustration by Freepik Stories
-        </ChakraLink>
-      </Text>
 
       <Box marginY={4}>
         <Heading textAlign="center">Page not Found.</Heading>
 
         <Box textAlign="center" marginTop={4}>
-          <Text>It&apos;s Okay!</Text>
+          <Text>You seem lost...</Text>
           <Link href="/" passHref>
             <Button
               backgroundColor={colorMode === "light" ? "gray.300" : "teal.500"}
             >
-              Let&apos;s Head Back
+              Take Me Back
             </Button>
           </Link>
         </Box>
