@@ -3,7 +3,7 @@ import { Flex, Link, Text } from "@chakra-ui/react";
 const Footer = () => {
   return (
     <Flex as="footer" width="full" align="center">
-      <Text>
+      <Text fontSize="xs" color="gray.500">
         {new Date().getFullYear()} -{" "}
         <Link
           href="https://github.com/lesrz"
