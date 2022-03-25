@@ -1,55 +1,44 @@
-import {
-  Text,
-  WrapItem,
-  Wrap,
-  useColorMode,
-  Checkbox,
-  Flex,
-  CheckboxGroup,
-  Image,
-} from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 
-import tasks from "./data/tasks";
+import Daily from "./Daily";
+import Weekly from "./Weekly";
 
 const Tasks = () => {
-  const { colorMode } = useColorMode();
-  const dailyTasks = tasks.dailies;
-  const dailyItems = dailyTasks.map((daily) => {
-    return (
-      <WrapItem aria-label="Task">
-        <Flex
-          p={2}
-          w="max-content"
-          bgColor={colorMode === "light" ? "gray.200" : "gray.800"}
-          borderRadius={8}
-        >
-          <Image src={daily.icon} h="16px" pr="4px" />
-          <Text
-            mr={2}
-            fontSize="xs"
-            fontWeight="semibold"
-            color={colorMode === "light" ? "gray.800" : "white"}
-          >
-            {daily.title}
-          </Text>
-          <CheckboxGroup colorScheme="yellow">
-            {[...Array(daily.amount)].map(() => (
-              <Checkbox
-                pr="2px"
-                borderColor={colorMode === "light" ? "gray.800" : "gray.100"}
-              />
-            ))}
-          </CheckboxGroup>
-        </Flex>
-      </WrapItem>
-    );
-  });
-
   return (
-    // Daily tasks
-    <Wrap py={4} w="500px">
-      {dailyItems}
-    </Wrap>
+    <Flex direction="column" w={{ base: "450px", lg: "600px", small: "550px" }}>
+      <Flex direction="column" py={4}>
+        <Heading
+          as="h3"
+          fontSize={{ base: "lg", sm: "3x1" }}
+          pb={4}
+          textAlign="left"
+        >
+          Dailies
+        </Heading>
+        <Daily />
+      </Flex>
+      <Flex direction="column" py={4}>
+        <Heading
+          as="h3"
+          fontSize={{ base: "lg", sm: "3x1" }}
+          pb={4}
+          textAlign="left"
+        >
+          Weeklies
+        </Heading>
+        <Weekly />
+      </Flex>
+      <Flex direction="column" py={4}>
+        <Heading
+          as="h3"
+          fontSize={{ base: "lg", sm: "3x1" }}
+          pb={4}
+          textAlign="left"
+        >
+          Done
+        </Heading>
+      </Flex>
+    </Flex>
   );
 };
 

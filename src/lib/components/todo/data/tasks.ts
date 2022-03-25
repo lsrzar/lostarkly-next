@@ -5,13 +5,13 @@ interface Task {
 }
 
 const dailies: Task[] = [
-  { title: "Una's Tasks", amount: 3, icon: "/task-icons/una-d.svg" },
+  { title: "Una's Tasks", amount: 1, icon: "/task-icons/una-d.svg" },
   {
     title: "Guardian Raids",
-    amount: 2,
+    amount: 1,
     icon: "/task-icons/guardian-raids.svg",
   },
-  { title: "Chaos Dungeon", amount: 2, icon: "/task-icons/chaos-dungeon.svg" },
+  { title: "Chaos Dungeon", amount: 1, icon: "/task-icons/chaos-dungeon.svg" },
   { title: "World Boss", amount: 1, icon: "/task-icons/world-boss.svg" },
   { title: "Chaos Gate", amount: 1, icon: "/task-icons/chaos-gate.svg" },
   {
@@ -19,7 +19,7 @@ const dailies: Task[] = [
     amount: 1,
     icon: "/task-icons/adventure-island.svg",
   },
-  { title: "Rapport", amount: 5, icon: "/task-icons/rapport.svg" },
+  { title: "Rapport", amount: 1, icon: "/task-icons/rapport.svg" },
   { title: "Guild Contribution", amount: 1, icon: "/task-icons/guild.svg" },
   { title: "Life Skills", amount: 1, icon: "/task-icons/life-skills.svg" },
   {
@@ -31,8 +31,8 @@ const dailies: Task[] = [
 ];
 
 const weeklies: Task[] = [
-  { title: "Una's Tasks", amount: 2, icon: "/task-icons/abyss.svg" },
-  { title: "Abyss", amount: 1 },
+  { title: "Una's Tasks", amount: 1, icon: "/task-icons/una-w.svg" },
+  { title: "Abyss", amount: 1, icon: "/task-icons/abyss.svg" },
   { title: "Port Exchange", amount: 1, icon: "/task-icons/port.svg" },
   {
     title: "Bloodstone Exchange",
