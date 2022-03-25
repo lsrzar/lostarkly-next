@@ -1,0 +1,8 @@
+/* Global Styling here */
+*:focus {
+  box-shadow: none !important;
+}
+
+*[data-focus] {
+  box-shadow: none !important;
+}
