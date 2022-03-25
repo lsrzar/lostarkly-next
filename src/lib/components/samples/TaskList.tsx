@@ -2,7 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 
 import Tasks from "../todo/Tasks";
 
-const CTASection = () => {
+const TaskList = () => {
   return (
     <Box textAlign={{ base: "center", md: "left" }} marginTop={8}>
       <Flex>
@@ -12,4 +12,4 @@ const CTASection = () => {
   );
 };
 
-export default CTASection;
+export default TaskList;

@@ -1,9 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 
-import CTASection from "lib/components/samples/CTASection";
-import SomeImage from "lib/components/samples/SomeImage";
-import SomeText from "lib/components/samples/SomeText";
+import HeroImage from "lib/components/samples/HeroImage";
+import TaskList from "lib/components/samples/TaskList";
 
 const Home = () => {
   return (
@@ -22,12 +21,11 @@ const Home = () => {
           content="Keep track of your daily and weekly tasks."
         />
       </Head>
-      <SomeImage />
 
-      <Box>
-        <SomeText />
-        <CTASection />
+      <Box w={{ md: "600px", sm: "450px", lg: "700px" }}>
+        <TaskList />
       </Box>
+      <HeroImage />
     </Box>
   );
 };
