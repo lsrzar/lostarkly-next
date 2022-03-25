@@ -19,3 +19,8 @@ module.exports = withPWA({
     dirs: ["src"],
   },
 });
+
+// next.config.js
+module.exports = {
+  future: { webpack5: true },
+};
