@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 
-import HeroImage from "lib/components/samples/HeroImage";
-import TaskList from "lib/components/samples/TaskList";
+import HeroImage from "lib/components/ui/HeroImage";
+import TaskList from "lib/components/ui/TaskList";
 
 const Home = () => {
   return (
