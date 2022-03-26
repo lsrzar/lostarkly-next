@@ -34,6 +34,7 @@ const Task = ({ title, amount, icon }: ITask) => {
       >
         <Image src={icon} h="16px" pr="4px" />
         <Text
+          tabIndex={0}
           mr={2}
           fontSize="xs"
           fontWeight="semibold"
