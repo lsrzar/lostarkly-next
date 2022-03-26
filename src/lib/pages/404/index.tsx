@@ -30,13 +30,17 @@ const Page404 = () => {
       </MotionBox>
 
       <Box marginY={4}>
-        <Heading textAlign="center">Page not Found.</Heading>
+        <Heading as="h1" textAlign="center" fontSize="x-large">
+          Page not Found.
+        </Heading>
 
         <Box textAlign="center" marginTop={4}>
           <Text>You seem lost...</Text>
           <Link href="/" passHref>
             <Button
-              backgroundColor={colorMode === "light" ? "gray.300" : "teal.500"}
+              backgroundColor={
+                colorMode === "light" ? "yellow.400" : "yellow.500"
+              }
             >
               Take Me Back
             </Button>
