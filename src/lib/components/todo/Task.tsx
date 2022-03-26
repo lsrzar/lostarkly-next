@@ -27,7 +27,7 @@ const Task = ({ title, amount, icon }: ITask) => {
         w="max-content"
         bgColor={colorMode === "light" ? "gray.200" : "gray.800"}
         borderRadius={8}
-        opacity={checked ? "50%" : "100%"}
+        opacity={checked ? "40%" : "100%"}
         cursor="pointer"
         onClick={() => setChecked(!checked)}
         {...getCheckboxProps()}
