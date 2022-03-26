@@ -11,7 +11,7 @@ const Weekly = () => {
 
   return (
     // Daily tasks
-    <Wrap w={{ base: "450px", lg: "600px", small: "550px" }}>
+    <Wrap key="weekly" w={{ base: "450px", lg: "600px", small: "550px" }}>
       {weeklyItems}
     </Wrap>
   );

@@ -9,7 +9,9 @@ const Daily = () => {
 
   return (
     // Daily tasks
-    <Wrap w={{ base: "450px", lg: "600px", small: "550px" }}>{dailyItems}</Wrap>
+    <Wrap key="daily" w={{ base: "450px", lg: "600px", small: "550px" }}>
+      {dailyItems}
+    </Wrap>
   );
 };
 
