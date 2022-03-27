@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import MotionBox from "lib/components/motion/Box";
 
-const SomeImage = () => {
+const HeroImage = () => {
   return (
     <Box>
       <MotionBox
@@ -13,10 +13,16 @@ const SomeImage = () => {
         maxWidth={[240, 320]}
         marginX="auto"
       >
-        <Image src="/arcana.svg" width={400} height={400} alt="Arcana" />
+        <Image
+          src="/arcana.svg"
+          width={400}
+          height={400}
+          alt="Arcana"
+          priority
+        />
       </MotionBox>
     </Box>
   );
 };
 
-export default SomeImage;
+export default HeroImage;
