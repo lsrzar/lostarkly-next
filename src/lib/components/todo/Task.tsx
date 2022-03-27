@@ -8,17 +8,21 @@ import {
   useCheckbox,
   useColorMode,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-interface ITask {
-  title: string;
-  amount: number;
-  icon?: string;
-}
+import type ITask from "./data/ITask";
 
-const Task = ({ title, amount, icon }: ITask) => {
+const Task = ({ title, icon }: ITask) => {
   const { colorMode } = useColorMode();
+  const checkboxId = `${title
+    .toLocaleLowerCase()
+    .split(" ")
+    .join("-")}-checkbox`;
   const [checked, setChecked] = useState(false);
+  useEffect(() => {
+    const ischecked = localStorage.getItem(checkboxId) === "true";
+    setChecked(ischecked);
+  }, [checkboxId]);
   const { getCheckboxProps } = useCheckbox();
   return (
     <WrapItem aria-label="Task">
@@ -29,7 +33,12 @@ const Task = ({ title, amount, icon }: ITask) => {
         borderRadius={8}
         opacity={checked ? "40%" : "100%"}
         cursor="pointer"
-        onClick={() => setChecked(!checked)}
+        onClick={() => {
+          setChecked(!checked);
+          if (typeof window !== "undefined") {
+            localStorage.setItem(checkboxId, `${!checked}`);
+          }
+        }}
         {...getCheckboxProps()}
       >
         <Image src={icon} h="16px" pr="4px" />
@@ -44,15 +53,18 @@ const Task = ({ title, amount, icon }: ITask) => {
           {title}
         </Text>
         <CheckboxGroup colorScheme="yellow">
-          {[...Array(amount)].map((i) => (
-            <Checkbox
-              key={i}
-              pr="2px"
-              isChecked={checked}
-              onChange={() => setChecked(!checked)}
-              borderColor={colorMode === "light" ? "gray.800" : "gray.100"}
-            />
-          ))}
+          <Checkbox
+            isChecked={checked}
+            id={checkboxId}
+            pr="2px"
+            onChange={() => {
+              if (typeof window !== "undefined") {
+                localStorage.setItem(checkboxId, `${checked}`);
+              }
+              setChecked(checked);
+            }}
+            borderColor={colorMode === "light" ? "gray.800" : "gray.100"}
+          />
         </CheckboxGroup>
       </Flex>
     </WrapItem>
