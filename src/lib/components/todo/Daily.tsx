@@ -5,7 +5,9 @@ import Task from "./Task";
 
 const Daily = () => {
   const dailyTasks = tasks.dailies;
-  const dailyItems = dailyTasks.map((daily) => <Task {...daily} />);
+  const dailyItems = dailyTasks.map((daily) => (
+    <Task {...daily} key={daily.title} />
+  ));
 
   return (
     // Daily tasks
