@@ -28,16 +28,6 @@ const Tasks = () => {
         </Heading>
         <Weekly />
       </Flex>
-      <Flex direction="column" py={4}>
-        <Heading
-          as="h3"
-          fontSize={{ base: "lg", sm: "3x1" }}
-          pb={4}
-          textAlign="left"
-        >
-          Done
-        </Heading>
-      </Flex>
     </Flex>
   );
 };
