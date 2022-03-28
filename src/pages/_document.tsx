@@ -5,7 +5,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import customTheme from "lib/styles/customTheme";
 
-const APP_NAME = "LOSTARKly";
+const APP_NAME = "LostArkly";
 
 class MyDocument extends Document {
   static getInitialProps(ctx: DocumentContext) {
@@ -20,7 +20,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
             rel="stylesheet"
           />
-
+          <meta
+            name="description"
+            content="Keep track of your daily and weekly tasks."
+          />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
