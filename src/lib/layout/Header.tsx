@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <Flex as="header" width="full" align="center">
       <Flex as="image" px={4} pt={2}>
-        <Link isExternal rel="noopener noreferrer" href="/">
+        <Link rel="noopener noreferrer" href="/">
           <Image
             aria-label="Lostarkly Logo"
             tabIndex={0}
