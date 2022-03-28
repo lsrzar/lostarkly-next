@@ -1,8 +1,13 @@
-import { Flex, Link, Text } from "@chakra-ui/react";
+import { Flex, Link, Text, Image } from "@chakra-ui/react";
+import Script from "next/script";
 
 const Footer = () => {
   return (
     <Flex as="footer" width="full" align="center">
+      <Script
+        src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+        strategy="beforeInteractive"
+      />
       <Text fontSize="xs" color="gray.500">
         {new Date().getFullYear()} -{" "}
         <Link
@@ -10,9 +15,23 @@ const Footer = () => {
           isExternal
           rel="noopener noreferrer"
         >
-          lszar
+          lesrz
         </Link>
       </Text>
+      <Flex ml="auto" mb={2}>
+        <Link
+          isExternal
+          rel="noopener noreferrer"
+          href="https://ko-fi.com/lsrza"
+        >
+          <Image
+            src="https://ko-fi.com/img/githubbutton_sm.svg"
+            alt="Buy me a coffee"
+            w="180px"
+            h="24px"
+          />
+        </Link>
+      </Flex>
     </Flex>
   );
 };
