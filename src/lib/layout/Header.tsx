@@ -14,8 +14,8 @@ const Header = () => {
             tabIndex={0}
             src={
               colorMode === "light"
-                ? "/lostarkly-light.svg"
-                : "/lostarkly-dark.svg"
+                ? "/lostarkly-dark.svg"
+                : "/lostarkly-light.svg"
             }
             layout="intrinsic"
             width={300}
