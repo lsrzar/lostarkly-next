@@ -12,7 +12,11 @@ const Header = () => {
           <Image
             aria-label="Lostarkly Logo"
             tabIndex={0}
-            src={`/lostarkly-${colorMode}.svg`}
+            src={
+              colorMode === "light"
+                ? "/lostarkly-light.svg"
+                : "/lostarkly-dark.svg"
+            }
             layout="intrinsic"
             width={300}
             height={65}
