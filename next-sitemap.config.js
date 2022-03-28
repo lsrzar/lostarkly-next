@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const NextSitemapConfig = {
-  siteUrl: "",
+  siteUrl: "https://lostarkly.vercel.app",
   generateRobotsTxt: true,
 };
 

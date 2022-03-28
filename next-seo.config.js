@@ -4,15 +4,15 @@ const defaultSEOConfig = {
   titleTemplate: "%s | LostArkly",
   defaultTitle: "LostArkly",
   description: "Keep track of your Lost Ark daily & weekly tasks.",
-  canonical: "",
+  canonical: "https://lostarkly.vercel.app",
   openGraph: {
-    url: "",
+    url: "https://lostarkly.vercel.app",
     title: "LostArkly",
     description: "Keep track of your Lost Ark daily & weekly tasks.",
     images: [
       {
-        url: "",
-        alt: "",
+        url: "https://i.imgur.com/dSEYWvM.png",
+        alt: "lostarkly og-image",
       },
     ],
     site_name: "lostarkly",
