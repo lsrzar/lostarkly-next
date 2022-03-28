@@ -1,30 +1,45 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const withPWA = require("next-pwa");
+
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' umami.sznm.dev;
+  frame-src giscus.app;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/;
+  img-src * blob: data: *.freepik.com;
+  media-src 'none';
+  connect-src *;
+  font-src 'self' https://fonts.gstatic.com/;
+`;
+
 const securityHeaders = [
   {
-    key: 'Content-Security-Policy',
-    value:
-      "default-src 'self'; font-src 'self' 'https://fonts.googleapis.com'; img-src 'self' *.somewhere.com; script-src 'self'",
+    key: "Content-Security-Policy",
+    value: ContentSecurityPolicy.replace(/\n/g, ""),
   },
   {
-    key: 'X-Frame-Options',
-    value: 'DENY',
+    key: "Referrer-Policy",
+    value: "origin-when-cross-origin",
   },
   {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff',
+    key: "X-Frame-Options",
+    value: "DENY",
   },
   {
-    key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin',
+    key: "X-Content-Type-Options",
+    value: "nosniff",
   },
   {
-    key: 'Permissions-Policy',
-    value: "camera=(); battery=(self); geolocation=(); microphone=('https://somewhere.com')",
+    key: "X-DNS-Prefetch-Control",
+    value: "on",
   },
   {
-  key: 'X-DNS-Prefetch-Control',
-  value: 'on'
+    key: "Strict-Transport-Security",
+    value: "max-age=31536000; includeSubDomains; preload",
+  },
+  {
+    key: "Permissions-Policy",
+    value: "geolocation=()",
   },
 ];
 
@@ -44,13 +59,23 @@ module.exports = withPWA({
 
 // next.config.js
 module.exports = {
+  reactStrictMode: true,
+  swcMinify: true,
   future: { webpack5: true },
-  async headers() {
+  headers: async() => {
     return [
+      {
+        source: "/",
+        headers: securityHeaders,
+      },
       {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      {
+        source: "/:path*",
+        headers: securityHeaders,
+      }
     ]
   }
 };
