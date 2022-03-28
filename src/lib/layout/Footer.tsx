@@ -1,13 +1,8 @@
 import { Flex, Link, Text, Image } from "@chakra-ui/react";
-import Script from "next/script";
 
 const Footer = () => {
   return (
     <Flex as="footer" width="full" align="center">
-      <Script
-        src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
-        strategy="beforeInteractive"
-      />
       <Text fontSize="xs" color="gray.500">
         {new Date().getFullYear()} -{" "}
         <Link
