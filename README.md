@@ -7,6 +7,8 @@
 
 A checklist for [Lost Ark](https://www.playlostark.com/)'s daily & weekly quests.
 
+⚡ **Try it out [here](https://lostarkly.vercel.app)!**
+
 <a href="https://user-images.githubusercontent.com/87744767/160224346-baa88e6e-0068-4633-aa45-c842a384cd67.gif" title="LostArkly Screencap">
   <img src="https://user-images.githubusercontent.com/87744767/160224346-baa88e6e-0068-4633-aa45-c842a384cd67.gif" alt="LostArkly Screencap" width="800px"/>
 </a>
