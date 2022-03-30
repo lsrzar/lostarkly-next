@@ -25,11 +25,9 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to see the site running.
 ## Tools
 
-- 🛠️ tooling for linting, formatting, and conventions
-
-  <a href="https://eslint.org/" title="ESLint">![ESLint](https://img.shields.io/badge/-ESLint-e8ebec?&logo=eslint&logoColor=462fb9&style=flat-square)</a>
-  <a href="https://prettier.io/" title="Prettier">![Prettier](https://img.shields.io/badge/-Prettier-e8ebec?&logo=prettier&logoColor=b38831&style=flat-square)</a>
-
-- 📱 PWA-ready
-
-- 🔎 SEO optimization configured
+  <a href="https://eslint.org/" title="ESLint">![ESLint](https://img.shields.io/badge/-ESLint-1b1a3f?&logo=eslint&logoColor=4b3abf&style=flat-square)</a>
+  <a href="https://prettier.io/" title="Prettier">![Prettier](https://img.shields.io/badge/-Prettier-1a2a30?&logo=prettier&logoColor=b38831&style=flat-square)</a>
+  <a href="https://code.visualstudio.com/" title="VSCode">![VSCode](https://img.shields.io/badge/-Visual%20Studio%20Code-2c2b30?&logo=visualstudiocode&logoColor=2386c5&style=flat-square)</a>
+  <a href="https://neovim.io/" title="Neovim">![Neovim](https://img.shields.io/badge/-Neovim-317dbb?&logo=neovim&logoColor=579a49&style=flat-square)</a>
+  <a href="https://vercel.com/" title="Vercel">![Vercel](https://img.shields.io/badge/-Vercel-222222?&logo=vercel&logoColor=ffffff&style=flat-square)</a>
+  
