@@ -6,11 +6,11 @@ const Footer = () => {
       <Text fontSize="xs" color="gray.500">
         {new Date().getFullYear()} -{" "}
         <Link
-          href="https://github.com/lesrz"
+          href="https://github.com/lsrzar"
           isExternal
           rel="noopener noreferrer"
         >
-          lesrz
+          lsrzar
         </Link>
       </Text>
       <Flex ml="auto" mb={2}>
