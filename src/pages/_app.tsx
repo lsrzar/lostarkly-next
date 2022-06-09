@@ -7,8 +7,15 @@ import defaultSEOConfig from "../../next-seo.config";
 import { Chakra } from "Chakra";
 import Layout from "lib/layout";
 import "lib/styles/globals.css";
+import { resetDaily, resetWeakly, updateLastVisit } from "lib/reset-util";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  if (typeof window !== "undefined") {
+    resetDaily();
+    resetWeakly();
+    updateLastVisit();
+  }
+
   return (
     <Chakra cookies={pageProps.cookies}>
       <Head>
