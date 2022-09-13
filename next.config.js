@@ -61,7 +61,6 @@ module.exports = withPWA({
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  future: { webpack5: true },
   headers: async() => {
     return [
       {

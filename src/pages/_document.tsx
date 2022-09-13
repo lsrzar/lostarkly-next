@@ -59,6 +59,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <ColorModeScript
+            type="cookie"
             initialColorMode={customTheme.config?.initialColorMode}
           />
           <Main />

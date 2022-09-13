@@ -1,9 +1,9 @@
-interface Task {
+export interface ITask {
   title: string;
   icon?: string;
 }
 
-const dailies: Task[] = [
+const dailies: ITask[] = [
   { title: "Una's Tasks", icon: "/task-icons/una-d.svg" },
   {
     title: "Guardian Raids",
@@ -26,7 +26,7 @@ const dailies: Task[] = [
   { title: "Stronghold", icon: "/task-icons/stronghold.svg" },
 ];
 
-const weeklies: Task[] = [
+const weeklies: ITask[] = [
   { title: "Una's Weekly Tasks", icon: "/task-icons/una-w.svg" },
   { title: "Abyss", icon: "/task-icons/abyss.svg" },
   { title: "Port Exchange", icon: "/task-icons/port.svg" },

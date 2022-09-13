@@ -1,33 +1,25 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
-import Daily from "./Daily";
-import Weekly from "./Weekly";
+import tasks from "./data/tasks";
+import TaskListWrapper from "./TaskListWrapper";
 
-const Tasks = () => {
+const taskData = [
+  {
+    type: "Dailies",
+    list: tasks?.dailies,
+  },
+  {
+    type: "Weeklies",
+    list: tasks?.weeklies,
+  },
+];
+
+const Tasks: React.FC = () => {
   return (
     <Flex direction="column" w={{ base: "450px", lg: "600px", small: "550px" }}>
-      <Flex direction="column" py={4}>
-        <Heading
-          as="h3"
-          fontSize={{ base: "lg", sm: "3x1" }}
-          pb={4}
-          textAlign="left"
-        >
-          Dailies
-        </Heading>
-        <Daily />
-      </Flex>
-      <Flex direction="column" py={4}>
-        <Heading
-          as="h3"
-          fontSize={{ base: "lg", sm: "3x1" }}
-          pb={4}
-          textAlign="left"
-        >
-          Weeklies
-        </Heading>
-        <Weekly />
-      </Flex>
+      {taskData?.map(({ type, list }) => (
+        <TaskListWrapper taskList={list} type={type} key={type} />
+      ))}
     </Flex>
   );
 };
