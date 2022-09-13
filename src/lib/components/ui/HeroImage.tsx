@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
-import Image from "next/image";
+import NImage from "next/image";
 
 import MotionBox from "lib/components/motion/Box";
 
-const HeroImage = () => {
+const HeroImage: React.FC = () => {
   return (
     <Box>
       <MotionBox
@@ -13,10 +13,10 @@ const HeroImage = () => {
         maxWidth={[240, 320]}
         marginX="auto"
       >
-        <Image
+        <NImage
           src="/arcana.svg"
-          width={400}
-          height={400}
+          width="400px"
+          height="400px"
           alt="Arcana"
           priority
         />

@@ -10,9 +10,9 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
-import type ITask from "./data/ITask";
+import type { ITask } from "./data/tasks";
 
-const Task = ({ title, icon }: ITask) => {
+const TaskBox: React.FC<ITask> = ({ title, icon }: ITask) => {
   const { colorMode } = useColorMode();
   const checkboxId = `${title
     .toLocaleLowerCase()
@@ -20,10 +20,17 @@ const Task = ({ title, icon }: ITask) => {
     .join("-")}-checkbox`;
   const [checked, setChecked] = useState(false);
   useEffect(() => {
-    const ischecked = localStorage.getItem(checkboxId) === "true";
-    setChecked(ischecked);
-  }, [checkboxId]);
+    const isChecked = localStorage.getItem(checkboxId) === "true";
+    setChecked(isChecked);
+  }, [checkboxId, setChecked]);
   const { getCheckboxProps } = useCheckbox();
+  const toggleChecked = () => setChecked((val) => !val);
+  const onClick = () => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(checkboxId, `${!checked}`);
+    }
+    toggleChecked();
+  };
   return (
     <WrapItem aria-label="Task">
       <Flex
@@ -31,17 +38,12 @@ const Task = ({ title, icon }: ITask) => {
         w="max-content"
         bgColor={colorMode === "light" ? "gray.200" : "gray.800"}
         borderRadius={8}
-        opacity={checked ? "40%" : "100%"}
+        opacity={checked ? "45%" : "100%"}
         cursor="pointer"
-        onClick={() => {
-          setChecked(!checked);
-          if (typeof window !== "undefined") {
-            localStorage.setItem(checkboxId, `${!checked}`);
-          }
-        }}
+        onClick={onClick}
         {...getCheckboxProps()}
       >
-        <Image src={icon} h="16px" pr="4px" />
+        <Image src={icon} width="16px" height="16px" pr="4px" />
         <Text
           tabIndex={0}
           mr={2}
@@ -57,12 +59,7 @@ const Task = ({ title, icon }: ITask) => {
             isChecked={checked}
             id={checkboxId}
             pr="2px"
-            onChange={() => {
-              if (typeof window !== "undefined") {
-                localStorage.setItem(checkboxId, `${checked}`);
-              }
-              setChecked(checked);
-            }}
+            onChange={onClick}
             borderColor={colorMode === "light" ? "gray.800" : "gray.100"}
           />
         </CheckboxGroup>
@@ -71,4 +68,4 @@ const Task = ({ title, icon }: ITask) => {
   );
 };
 
-export default Task;
+export default TaskBox;

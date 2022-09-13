@@ -1,15 +1,15 @@
 import { Box, Flex, Link, useColorMode } from "@chakra-ui/react";
-import Image from "next/image";
+import NImage from "next/image";
 
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const { colorMode } = useColorMode();
   return (
-    <Flex as="header" width="full" align="center">
-      <Flex as="image" px={4} pt={2}>
+    <Flex width="full" align="center">
+      <Flex px={4} pt={2}>
         <Link rel="noopener noreferrer" href="/">
-          <Image
+          <NImage
             aria-label="Lostarkly Logo"
             tabIndex={0}
             src={
@@ -18,8 +18,8 @@ const Header = () => {
                 : "/lostarkly-dark.svg"
             }
             layout="intrinsic"
-            width={300}
-            height={65}
+            width="300px"
+            height="65px"
             alt="Lostarkly Logo"
           />
         </Link>

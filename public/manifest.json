@@ -2,7 +2,6 @@
   "name": "LostArkly",
   "short_name": "lostarkly",
   "lang": "en-US",
-  "start_url": "https://lostarkly.vercel.app/",
   "display": "standalone",
   "dir": "ltr",
   "theme_color": "#ffffff",
