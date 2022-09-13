@@ -21,8 +21,8 @@ A checklist for [Lost Ark](https://www.playlostark.com/)'s daily & weekly quests
 ```bash
 git clone https://github.com/lesrz/lostarkly-next
 cd lostarkly-next
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the site running.
@@ -43,7 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) to see the site running.
 
 ## Known Issues
 
-- Wonky implementation of checkboxes
+- Wonky implementation of checkboxes & cookies (plan to implement state management and local storage management libraries)
 - Lack of accessibility
 - Semantic HTML inconsistencies
-- Suboptimal cookie implementation
