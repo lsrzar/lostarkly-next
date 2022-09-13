@@ -5,16 +5,19 @@
 <a href="https://chakra-ui.com/" title="Chakra UI">![Chakra UI](https://img.shields.io/badge/-Chakra%20UI-e8ebec?&logo=chakraui&style=flat-square)</a>
 <a href="https://www.typescriptlang.org" title="TypeScript">![TypeScript](https://img.shields.io/badge/-TypeScript-e8ebec?&logo=TypeScript&style=flat-square)</a>
 
-A checklist for [Lost Ark](https://www.playlostark.com/)'s daily & weekly quests.
+⚡ A checklist for [Lost Ark](https://www.playlostark.com/)'s daily & weekly quests. **Try it out [here](https://lostarkly.vercel.app)!**
 
-> This project is under **heavy development**🚧.
+> This project is a **work in progress**🚧.
+
+> From the **codebase** to the **actual functionality**, I plan to expand upon this app with the knowledge I gather from my dev journey.
+
 > Currently, the data persists only within the browser as a set of cookies (awfully implemented) and does not do anything else! See the planned features [here](#planned-features)
 
-⚡ **Try it out [here](https://lostarkly.vercel.app)!**
-
-<a href="https://user-images.githubusercontent.com/87744767/160224346-baa88e6e-0068-4633-aa45-c842a384cd67.gif" title="LostArkly Screencap">
-  <img src="https://user-images.githubusercontent.com/87744767/160224346-baa88e6e-0068-4633-aa45-c842a384cd67.gif" alt="LostArkly Screencap" width="800px"/>
-</a>
+<div align="center">
+  <a href="https://user-images.githubusercontent.com/87744767/160224346-baa88e6e-0068-4633-aa45-c842a384cd67.gif" title="LostArkly Screencap">
+    <img src="https://user-images.githubusercontent.com/87744767/160224346-baa88e6e-0068-4633-aa45-c842a384cd67.gif" alt="LostArkly Screencap" width="700px"/>
+  </a>
+</div>
 
 ## Setting it up
 
