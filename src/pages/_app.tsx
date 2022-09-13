@@ -9,7 +9,7 @@ import Layout from "lib/layout";
 import "lib/styles/globals.css";
 import { resetDaily, resetWeekly, updateLastVisit } from "lib/reset-util";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component }: AppProps) => {
   if (typeof window !== "undefined") {
     resetDaily();
     resetWeekly();
@@ -17,7 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   }
 
   return (
-    <Chakra cookies={pageProps.cookies}>
+    <Chakra>
       <Head>
         <meta
           name="viewport"
@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
       <DefaultSeo {...defaultSEOConfig} />
       <Layout>
-        <Component {...pageProps} />
+        <Component {...Component.defaultProps} />
       </Layout>
     </Chakra>
   );
