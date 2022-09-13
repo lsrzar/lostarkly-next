@@ -40,6 +40,7 @@ const TaskBox: React.FC<ITask> = ({ title, icon }: ITask) => {
         borderRadius={8}
         opacity={checked ? "45%" : "100%"}
         cursor="pointer"
+        userSelect="none"
         onClick={onClick}
         {...getCheckboxProps()}
       >
